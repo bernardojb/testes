@@ -1,0 +1,25 @@
+{
+    "cases":[
+        {
+            "id": 1,
+            "active": true,
+            "name": "Orthohack",
+            "description": "Esse é um teste de descrição para um futuro case brabo com hidratação backendística.",
+            "link":"Teste de link"
+        },
+        {
+            "id": 2,
+            "active": true,
+            "name": "Orthohack 2",
+            "description": "Esse é um teste de descrição para um futuro case brabo com hidratação backendística. 2",
+            "link":"Teste de link"
+        },
+        {
+            "id": 3,
+            "active": false,
+            "name": "Orthohack 3",
+            "description": "Esse é um teste de descrição para um futuro case brabo com hidratação backendística. 3",
+            "link":"Teste de link"
+        }
+    ]
+}
