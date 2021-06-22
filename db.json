@@ -2,6 +2,7 @@
     "products":[
         {
             "id": 1,
+            "name":"GOB",
             "pill1":"APP",
             "pill2":"UI UX",
             "caseLogo":"/images/gob/gob.svg", "logoWidth":"55", "logoHeight":"110",
@@ -10,6 +11,7 @@
         },
         {
             "id": 2,
+            "name":"TFLX",
             "pill1":"WEB",
             "pill2":"UI UX",
             "caseLogo":"/images/tflx/tflx.svg", "logoWidth":"220", "logoHeight":"55",
@@ -19,6 +21,7 @@
         ,
         {
             "id": 3,
+            "name":"OH",
             "pill1":"APP",
             "pill2":"UI UX",
             "caseLogo":"/images/oh/oh.svg", "logoWidth":"220", "logoHeight":"55",
@@ -27,6 +30,7 @@
         },
         {
             "id": 4,
+            "name":"MP",
             "pill1":"APP",
             "pill2":"BRANDING",
             "caseLogo":"/images/mp/mp.svg", "logoWidth":"80", "logoHeight":"70",
@@ -35,6 +39,7 @@
         },
         {
             "id": 5,
+            "name":"B Factor",
             "pill1":"WEB",
             "pill2":"DEV",
             "caseLogo":"/images/bfac/bfactor.svg", "logoWidth":"85", "logoHeight":"70",
