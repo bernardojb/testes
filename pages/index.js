@@ -20,7 +20,7 @@ const Index = props => (
           </h1>
         </div>
         <div className="home-2">
-          <div className="cases_container">
+          <div className={styles.cases_container}>
             {props.products.map(product => (
               <Link
                 key={product.id}
@@ -32,21 +32,23 @@ const Index = props => (
                       <div className={styles.pill}>{product.pill1}</div>
                       <div className={styles.pill}>{product.pill2}</div>
                     </div>
-                    <Image
-                      key={product.caselogo}
-                      src={product.caselogo}
-                      width={150}
-                      height={60}
-                    />
+                    <div className={styles.case_logo}>
+                      <Image
+                        key={product.caseLogo}
+                        src={product.caseLogo}
+                        width={product.logoWidth}
+                        height={product.logoHeight}
+                      />
+                    </div>
                     <p>{product.details}</p>
                     <a>conheça o site</a>
                   </div>
                   <div className={styles.case_image}>
                     <Image
-                     key={product.caseimage}
-                     src={product.caseimage}
-                     width={200}
-                     height={200}
+                      key={product.caseImage}
+                      src={product.caseImage}
+                      width={product.imageWidth}
+                      height={product.imageHeight}
                     />
                   </div>
                 </div>
