@@ -26,22 +26,29 @@ const Index = props => (
                 key={product.id}
                 href='/products/[id]'
                 as={`/products/${product.id}`}>
-                <div className={styles.case}>
+                <div className={styles.case_container}>
                   <div className={styles.case_content}>
                     <div className={styles.pill_container}>
                       <div className={styles.pill}>{product.pill1}</div>
                       <div className={styles.pill}>{product.pill2}</div>
                     </div>
                     <Image
-                      key={product.image}
-                      src={product.image}
+                      key={product.caselogo}
+                      src={product.caselogo}
                       width={150}
                       height={60}
                     />
                     <p>{product.details}</p>
                     <a>conheça o site</a>
                   </div>
-
+                  <div className={styles.case_image}>
+                    <Image
+                     key={product.caseimage}
+                     src={product.caseimage}
+                     width={200}
+                     height={200}
+                    />
+                  </div>
                 </div>
               </Link>
             ))}
