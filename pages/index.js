@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image';
 import Header from '../components/header/header'
 import styles from './index.module.scss'
-import fetch from 'node-fetch';
+import fetch from 'isomorphic-unfetch';
 // import Loading from '../components/loading/loading'
 
 const Index = props => (
@@ -40,9 +40,7 @@ const Index = props => (
                   />
                 </div>
               </Link>
-
             ))}
-
           </div>
         </div>
       </div>
@@ -52,10 +50,12 @@ const Index = props => (
 
 Index.getInitialProps = async function () {
   const res = await fetch(
-    "https://my-json-server.typicode.com/bernardojb/testes/cases"
+    "https://my-json-server.typicode.com/bernardojb/testes/products"
   );
   const data = await res.json();
   return {
-    cases: data
+    products: data
   };
-}
+};
+
+export default Index;
