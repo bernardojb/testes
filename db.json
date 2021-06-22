@@ -4,42 +4,42 @@
             "id": 1,
             "pill1":"APP",
             "pill2":"UI UX",
-            "caselogo":"/images/gob/gob.svg", "logoWidth":"55", "logoHeight":"110",
+            "caseLogo":"/images/gob/gob.svg", "logoWidth":"55", "logoHeight":"110",
             "details": "App para iOS e Android, como ferramenta complementar do curso online Extensão em Ginecologia e Obstetrícia.",
-            "caseimage":"/images/gob/gob_1.png", "imageWidth":"200", "imageHeight":"200"
+            "caseImage":"/images/gob/gob_1.png", "imageWidth":"200", "imageHeight":"200"
         },
         {
             "id": 2,
             "pill1":"WEB",
             "pill2":"UI UX",
-            "caselogo":"/images/tflx/tflx.svg", "logoWidth":"220", "logoHeight":"55",
+            "caseLogo":"/images/tflx/tflx.svg", "logoWidth":"220", "logoHeight":"55",
             "details": "Desenvolvimento de um novo website para a Tecno-Flex, uma empresa com mais de 62 anos de história no ramo metalúrgico.",
-            "caseimage":"/images/tflx/tflx_1.png", "imageWidth":"200", "imageHeight":"200"
+            "caseImage":"/images/tflx/tflx_1.png", "imageWidth":"200", "imageHeight":"200"
         }
         ,
         {
             "id": 3,
             "pill1":"APP",
             "pill2":"UI UX",
-            "caselogo":"/images/oh/oh.svg", "logoWidth":"220", "logoHeight":"55",
+            "caseLogo":"/images/oh/oh.svg", "logoWidth":"220", "logoHeight":"55",
             "details": "Desenvolvimento de um app para iOS e Android, como ferramenta complementar do curso online de especialização em ortopedia.",
-            "caseimage":"/images/oh/oh_1.png",  "imageWidth":"200", "imageHeight":"200"
+            "caseImage":"/images/oh/oh_1.png",  "imageWidth":"200", "imageHeight":"200"
         },
         {
             "id": 4,
             "pill1":"APP",
             "pill2":"BRANDING",
-            "caselogo":"/images/mp/mp.svg", "logoWidth":"80", "logoHeight":"70",
+            "caseLogo":"/images/mp/mp.svg", "logoWidth":"80", "logoHeight":"70",
             "details": "App desenvolvido para o @MedicinaPratica, em iOS e Android para acesso a conteúdo exclusivo para estudantes de residência médica.",
-            "caseimage":"/images/mp/mp_1.png",  "imageWidth":"200", "imageHeight":"200"
+            "caseImage":"/images/mp/mp_1.png",  "imageWidth":"200", "imageHeight":"200"
         },
         {
             "id": 5,
             "pill1":"WEB",
             "pill2":"DEV",
-            "caselogo":"/images/bfac/bfactor.svg", "logoWidth":"85", "logoHeight":"70",
+            "caseLogo":"/images/bfac/bfactor.svg", "logoWidth":"85", "logoHeight":"70",
             "details": "Website para a B Factor, uma empresa especializada na organização de festas e eventos.",
-            "caseimage":"/images/bfac/bfactor.png", "imageWidth":"200", "imageHeight":"200"
+            "caseImage":"/images/bfac/bfactor.png", "imageWidth":"200", "imageHeight":"200"
         }
     ]
 }
