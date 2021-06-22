@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image';
+import Image from 'next/image'
+import Link from 'next/link'
 import Header from '../components/header/header'
 import styles from './index.module.scss'
-import fetch from 'isomorphic-unfetch';
+import fetch from 'isomorphic-unfetch'
 // import Loading from '../components/loading/loading'
 
 const Index = props => (
@@ -34,9 +35,9 @@ const Index = props => (
                   </div>
                   <Image
                   key={product.image}
-                  href={product.image}
+                  src={product.image}
                   width={150}
-                  height={150}
+                  height={60}
                   />
                 </div>
               </Link>
