@@ -8,6 +8,7 @@ body {
   font-size: 18px;
   background-color: black;
   color: white;
+  overflow-x: hidden;
 }
 
 * {
@@ -33,4 +34,10 @@ img {
 
 .site-content{
 padding: 0px 5%;
+}
+
+section{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 25px;
 }
