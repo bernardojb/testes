@@ -4,15 +4,15 @@
             "id": 1,
             "name": "Orthohack",
             "details": "Esse é um teste de descrição para um futuro case brabo com hidratação backendística.",
-            "price":"",
+            "price":"88 dinheiros",
             "image":"Teste de link"
         },
         {
             "id": 2,
-            "active": true,
-            "name": "Orthohack 2",
-            "description": "Esse é um teste de descrição para um futuro case brabo com hidratação backendística. 2",
-            "link":"Teste de link"
+            "name": "Orthohack",
+            "details": "Esse é um teste de descrição para um futuro case brabo com hidratação backendística.",
+            "price":"88 dinheiros",
+            "image":"Teste de link"
         }
     ]
 }
