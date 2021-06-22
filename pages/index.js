@@ -23,22 +23,25 @@ const Index = props => (
           <div className="cases_container">
             {props.products.map(product => (
               <Link
-              key={product.id}
-              href='/products/[id]'
-              as={`/products/${product.id}`}>
+                key={product.id}
+                href='/products/[id]'
+                as={`/products/${product.id}`}>
                 <div className={styles.case}>
                   <div className={styles.case_content}>
-                    <h1>{product.name}</h1>
+                    <div className={styles.pill_container}>
+                      <div className={styles.pill}>{product.pill1}</div>
+                      <div className={styles.pill}>{product.pill2}</div>
+                    </div>
+                    <Image
+                      key={product.image}
+                      src={product.image}
+                      width={150}
+                      height={60}
+                    />
                     <p>{product.details}</p>
-                    <p>{product.price}</p>
-                    <a>Link</a>
+                    <a>conheça o site</a>
                   </div>
-                  <Image
-                  key={product.image}
-                  src={product.image}
-                  width={150}
-                  height={60}
-                  />
+
                 </div>
               </Link>
             ))}

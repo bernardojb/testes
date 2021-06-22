@@ -2,17 +2,43 @@
     "products":[
         {
             "id": 1,
-            "name": "Orthohack",
-            "details": "Esse é um teste de descrição para um futuro case brabo com hidratação backendística.",
-            "price":"88 dinheiros",
-            "image":"https://res.cloudinary.com/spuritika/image/upload/v1624321585/hokup/orthohack/oh_ukosds.svg"
+            "pill1":"APP",
+            "pill2":"UI UX",
+            "caselogo":"https://via.placeholder.com/150x60",
+            "details": "App para iOS e Android, como ferramenta complementar do curso online Extensão em Ginecologia e Obstetrícia.",
+            "caseimage":"https://via.placeholder.com/200x200"
         },
         {
-            "id": 2,
-            "name": "Orthohack",
-            "details": "Esse é um teste de descrição para um futuro case brabo com hidratação backendística.",
-            "price":"88 dinheiros",
-            "image":"https://res.cloudinary.com/spuritika/image/upload/v1624321585/hokup/orthohack/oh_ukosds.svg"
+            "id": 1,
+            "pill1":"WEB",
+            "pill2":"UI UX",
+            "caselogo":"https://via.placeholder.com/150x60",
+            "details": "Desenvolvimento de um novo website para a Tecno-Flex, uma empresa com mais de 62 anos de história no ramo metalúrgico.",
+            "caseimage":"https://via.placeholder.com/200x200"
+        },
+        {
+            "id": 1,
+            "pill1":"APP",
+            "pill2":"UI UX",
+            "caselogo":"https://via.placeholder.com/150x60",
+            "details": "Desenvolvimento de um app para iOS e Android, como ferramenta complementar do curso online de especialização em ortopedia.",
+            "caseimage":"https://via.placeholder.com/200x200"
+        },
+        {
+            "id": 1,
+            "pill1":"APP",
+            "pill2":"BRANDING",
+            "caselogo":"https://via.placeholder.com/150x60",
+            "details": "App desenvolvido para o @MedicinaPratica, em iOS e Android para acesso a conteúdo exclusivo para estudantes de residência médica.",
+            "caseimage":"https://via.placeholder.com/200x200"
+        },
+        {
+            "id": 5,
+            "pill1":"WEB",
+            "pill2":"DEV",
+            "caselogo":"https://via.placeholder.com/150x60",
+            "details": "Website para a B Factor, uma empresa especializada na organização de festas e eventos.",
+            "caseimage":"https://via.placeholder.com/200x200"
         }
     ]
 }
