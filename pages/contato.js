@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import Header from '../components/header/header'
-import Loading from '../components/loading/loading'
 
 export default function Cases() {
     return (
-        <Loading>
+        <>
             <Head>
                 <title>Contato</title>
             </Head>
@@ -16,6 +15,6 @@ export default function Cases() {
                     </h1>
                 </main>
             </section>
-        </Loading>
+        </>
     )
 }

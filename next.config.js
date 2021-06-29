@@ -12,6 +12,7 @@
 //     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/TextPlugin.min.js',
 //     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollToPlugin.min.js',
 //     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js', 
-//     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/EasePack.min.js'
+//     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/EasePack.min.js',
+//     'https://www.gstatic.com/draco/v1/decoders/'
 //     ) : ''
 // }

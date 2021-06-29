@@ -8,9 +8,10 @@ class MyApp extends App {
     const { Component, pageProps, router} = this.props;
 
     return (
-      <AnimatePresence exitBeforeEnter>
+      // <AnimatePresence exitBeforeEnter>
+      // </AnimatePresence>
       <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
+
     )
   }
 }

@@ -1,106 +1,87 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+import React, { useRef, useState, Suspense } from 'react';
+import styles from './index.module.scss';
+//Components
 import Header from '../components/header/header'
-import styles from './index.module.scss'
-import fetch from 'isomorphic-unfetch'
-import { animate, motion } from "framer-motion"
-// import Loading from '../components/loading/loading'
+import { Canvas, useFrame } from '@react-three/fiber'
 
-const easing = [0.6, -0.05, 0.01, 0.99];
-const fadeInUp = {
-  initial: {
-    y: 60,
-    opacity: 0
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    trasition: {
-      duration: 0.6,
-      ease: easing
-    }
-  }
-};
+import { softShadows, MeshWobbleMaterial, OrbitControls, useGLTF } from '@react-three/drei';
 
-const stagger = {
-  animate: {
-    trasition: {
-      staggerChildren: 0.1
-    }
-  }
+import { useSpring, a } from '@react-spring/three';
+
+softShadows();
+
+const Model = () => {
+  const gltf = useGLTF('chairBlue.gltf', true)
+
+  return <primitive object={gltf.scene} dispose={null} />
 }
 
-const Index = props => (
-  <motion.div
-    exit={{ opacity: 0 }}
-    initial="initial"
-    animate="animate"
-  >
-    <Head>
-      <title>hokup I Transformação Digital</title>
-    </Head>
-    <section>
-      <Header />
-      <div className="home-container">
-        <div className={styles.home_1}>
-          <h1>
-            Home
-          </h1>
-        </div>
-        <div className="home-2">
-          <motion.div variants={stagger} className={styles.cases_container}>
-            {props.products.map(product => (
-              <Link
-                key={product.id}
-                href='/products/[id]'
-                as={`/products/${product.id}`}>
-                <motion.div variants={fadeInUp} className={styles.case_container}>
-                  <div className={styles.case_content}>
-                    <div className={styles.pill_container}>
-                      <div className={styles.pill}>{product.pill1}</div>
-                      <div className={styles.pill}>{product.pill2}</div>
-                    </div>
-                    <div className={styles.case_logo}>
-                      <Image
-                        key={product.caseLogo}
-                        src={product.caseLogo}
-                        width={product.logoWidth}
-                        height={product.logoHeight}
-                      />
-                    </div>
-                    <p>{product.details}</p>
-                    <a className={styles.b_btn}>conheça o site</a>
-                  </div>
-                  <div className={styles.case_image}>
-                    <motion.img
-                      key={product.caseImage}
-                      src={product.caseImage}
-                      width={product.imageWidth}
-                      height={product.imageHeight}
-                      initial={{ x: 60, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      trasition={{ delay: .2 }}
-                    />
-                  </div>
-                </motion.div>
-              </Link>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  </motion.div>
-);
+const SpinningMesh = ({ position, args }) => {
+  const mesh = useRef(null);
+  // useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
 
-Index.getInitialProps = async function () {
-  const res = await fetch(
-    "https://my-json-server.typicode.com/bernardojb/testes/products"
-  );
-  const data = await res.json();
-  return {
-    products: data
-  };
-};
+  //
+  const [expand, setExpand] = useState(false);
+  // const props = useSpring({
+  //   scale: expand ? [0.1, 0.1, 0.1] : [0.2, 0.2, 0.2],
+  // });
+
+  return (
+    <a.mesh
+      onClick={() => setExpand(!expand)}
+      scale={[1, 1, 1]}
+      castShadow
+      position={position}
+      ref={mesh}>
+      {/* <boxBufferGeometry attach='geometry' args={args} /> */}
+      <Model />
+      {/* <MeshWobbleMaterial attach='material' color={color} speed={speed} factor={.6} /> */}
+    </a.mesh>
+  )
+}
+
+function Index() {
+  return (
+    <>
+      <Header />
+      <div className={styles.background} />
+      <Canvas
+        className={styles.root}
+        shadows
+        camera={{ position: [10, 50, 120], fov: 70 }}>
+        <ambientLight intensity={0.3} />
+        <directionalLight
+          castShadow
+          position={[0, 10, 0]}
+          intensity={1.5}
+          shadow-mapSize-width={1024}
+          shadow-mapSize-height={1024}
+          shadow-camera-far={50}
+          shadow-camera-left={-10}
+          shadow-camera-right={10}
+          shadow-camera-top={10}
+          shadow-camera-bottom={-10}
+        />
+        <pointLight position={[-10, 0, -20]} intensity={0.5} />
+        <pointLight position={[0, -10, 0]} intensity={1.5} />
+
+        <Suspense fallback={null} >
+          <group>
+            <mesh
+              receiveShadow
+              rotation={[-Math.PI / 2, 0, 0]}
+              position={[0, -3, 0]}>
+              <planeBufferGeometry attach='geometry' args={[100, 100]} />
+              <shadowMaterial attach='material' opacity={.3} color={'white'} />
+            </mesh>
+
+            <SpinningMesh position={[0, 1, 0]} args={[3, 2, 1]} color='lightblue' />
+          </group>
+        </Suspense>
+        <OrbitControls />
+      </Canvas>
+    </>
+  )
+}
 
 export default Index;

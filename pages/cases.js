@@ -1,47 +1,25 @@
-import React, { useRef, useState, Suspense } from 'react'
-import Head from 'next/head'
+import React from 'react'
+import Iframe from 'react-iframe'
+import styles from './index.module.scss'
+
+//Components
 import Header from '../components/header/header'
-import { Section } from '../components/section/section';
-import { Canvas } from '@react-three/fiber'
-import { Html, useGLTF } from '@react-three/drei'
-
-
-const Model = () => {
-    const gltf = useGLTF("../public/chairBlue.gltf");
-    return (
-        <primitive object={gltf.scene} dispose={null} />
-    );
-};
-
-const HTMLContent = () => {
-    return (
-        <Section factor={1.5} offset={1}>
-            <group position={[0, 250, 0]}>
-                <mesh position={[0, 35, 0]}>
-                    <Model />
-                </mesh>
-                <Html fullscreen>
-                    <div className="container">
-                        <h1 className="title">Hello</h1>
-                    </div>
-                </Html>
-            </group>
-        </Section>
-    )
-}
 
 export default function Cases() {
     return (
         <>
-            {/* <Head>
-                <title>Cases</title>
-            </Head> */}
             <Header />
-            <Canvas colorManagement camera={{ position: [0, 0, 120], fov: 70 }}>
-                <Suspense fallback={null}>
-                    <HTMLContent />
-                </Suspense>
-            </Canvas>
+            <div className={styles.background} />
+            <div className={styles.iframe_container} >
+                <Iframe url="https://my.spline.design/librarydevicemodel-46ed2047dd7dba7234ec7b6773512a97/"
+                    width="800px"
+                    height="800px"
+                    id="myId"
+                    className={styles.iframe}
+                    display="initial"
+                    position="relative" />
+            </div>
+
         </>
     )
 }
